@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 
+// components
+import HamburgerButton from '../HamburgerButton/HamburgerButton';
+
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
@@ -39,6 +42,7 @@ export default function Navbar() {
           <Link href='/kontakt'>Kontakt</Link>
         </li>
       </ul>
+      <HamburgerButton />
     </nav>
   );
 }

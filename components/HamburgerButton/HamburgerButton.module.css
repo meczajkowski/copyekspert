@@ -1,0 +1,76 @@
+.button {
+  display: none;
+
+  position: absolute;
+  right: 2rem;
+
+  height: var(--hamburger-button-size);
+  width: var(--hamburger-button-size);
+
+  /* margin: 5rem; */
+
+  background: transparent;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  top: calc(
+    (var(--hamburger-button-size) / 2) -
+      (var(--hamburger-button-line-height) / 2)
+  );
+
+  height: var(--hamburger-button-line-height);
+  width: 100%;
+
+  background-color: var(--foreground-color);
+  transition-duration: 0.5s;
+}
+
+.line:before {
+  content: '';
+
+  position: absolute;
+  top: calc(
+    (var(--hamburger-button-size) / -3) -
+      (var(--hamburger-button-line-height) / 2)
+  );
+  left: 0;
+
+  height: var(--hamburger-button-line-height);
+  width: 100%;
+
+  background-color: var(--foreground-color);
+  transition-duration: 0.5s;
+}
+.line:after {
+  content: '';
+
+  position: absolute;
+  top: calc(
+    (var(--hamburger-button-size) / 3) -
+      (var(--hamburger-button-line-height) / -2)
+  );
+  left: 0;
+
+  height: var(--hamburger-button-line-height);
+  width: 100%;
+
+  background-color: var(--foreground-color);
+  transition-duration: 0.5s;
+}
+
+.button.open .line {
+  transition: 0.5s;
+}
+.button.open .line:before {
+  transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
+}
+
+.button.open .line:after {
+  transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
+}
