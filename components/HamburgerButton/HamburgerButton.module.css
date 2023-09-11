@@ -7,8 +7,6 @@
   height: var(--hamburger-button-size);
   width: var(--hamburger-button-size);
 
-  /* margin: 5rem; */
-
   background: transparent;
   border: none;
 }
@@ -28,7 +26,8 @@
   width: 100%;
 
   background-color: var(--foreground-color);
-  transition-duration: 0.5s;
+  border-radius: var(--hamburger-button-line-height);
+  transition-duration: 0.2s;
 }
 
 .line:before {
@@ -45,8 +44,10 @@
   width: 100%;
 
   background-color: var(--foreground-color);
-  transition-duration: 0.5s;
+  border-radius: var(--hamburger-button-line-height);
+  transition-duration: 0.2s;
 }
+
 .line:after {
   content: '';
 
@@ -61,7 +62,8 @@
   width: 100%;
 
   background-color: var(--foreground-color);
-  transition-duration: 0.5s;
+  border-radius: var(--hamburger-button-line-height);
+  transition-duration: 0.2s;
 }
 
 .button.open .line {
@@ -73,4 +75,10 @@
 
 .button.open .line:after {
   transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
+}
+
+@media (max-width: 1024px) {
+  .button {
+    display: block;
+  }
 }

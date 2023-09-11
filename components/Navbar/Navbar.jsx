@@ -1,13 +1,23 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 
 // components
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className={styles.nav}>
+      <HamburgerButton onClick={handleNav} isOpen={isOpen} />
       <Link href='https://copyekspert.pl/'>
         <Image
           width={254}
@@ -17,7 +27,7 @@ export default function Navbar() {
         />
       </Link>
 
-      <ul className={styles.list}>
+      <ul className={`${styles.list} ${isOpen ? `${styles.isopen}` : ''}`}>
         <li className={styles.item}>
           <Link href='/'>Strona główna</Link>
         </li>
@@ -42,7 +52,6 @@ export default function Navbar() {
           <Link href='/kontakt'>Kontakt</Link>
         </li>
       </ul>
-      <HamburgerButton />
     </nav>
   );
 }
