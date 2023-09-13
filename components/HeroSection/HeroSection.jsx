@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className={styles.heroSection}>
       <div className={styles.header}>
         <h1 className={styles.heading}>
-          Urządzenia Wielofunkcyjne Konica Minolta we Wrocławiu
+          Urządzenia Wielofunkcyjne <span>Konica Minolta</span> we Wrocławiu
         </h1>
         <p className={styles.desc}>
           Jesteśmy ekspertami w dziedzinie biurowych urządzeń drukujących

@@ -7,5 +7,50 @@
 }
 
 .header {
-  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+
+  width: 50%;
+  padding: 1rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+}
+
+.heroImgContainer {
+  width: 50%;
+}
+
+.heroImg {
+  position: relative;
+  z-index: -1;
+
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.ctaButton {
+  font-family: inherit;
+  font-size: 2rem;
+
+  padding-block: 1rem;
+  padding-inline: 3rem;
+
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  transform: scale(1.025);
 }
