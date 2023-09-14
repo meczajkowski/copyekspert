@@ -1,7 +1,7 @@
 .heroSection {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   height: 80vh;
 }
@@ -13,16 +13,20 @@
   align-items: flex-start;
   gap: 3rem;
 
-  width: 50%;
+  max-width: 500px;
   padding: 1rem;
 }
 
 .heading {
   font-size: 3.5rem;
 }
+.headingSpan {
+  display: block;
+}
 
 .heroImgContainer {
-  width: 50%;
+  /* width: 60%; */
+  min-width: 645px;
 }
 
 .heroImg {
