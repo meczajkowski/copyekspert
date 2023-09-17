@@ -15,15 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='pl'>
       <body className={inter.className}>
-        <div
-          style={{
-            maxWidth: '1440px',
-            marginInline: 'auto',
-            padding: '1rem',
-          }}
-        >
-          <Navbar /> {children}
-        </div>
+        <Navbar /> {children}
       </body>
     </html>
   );
