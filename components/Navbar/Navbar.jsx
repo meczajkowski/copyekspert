@@ -1,14 +1,11 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
 // components
-import HamburgerButton from '../HamburgerButton/HamburgerButton';
-import { useState } from 'react';
 import Container from '../ui/Container';
+import MobileNav from '../MobileNav/MobileNav';
 
-const routes = [
+export const routes = [
   {
     label: 'Strona główna',
     href: '/',
@@ -40,17 +37,11 @@ const routes = [
 ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleNav = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <header className={'sm:flex sm:justify-between py-3 px-4 border-b'}>
       <Container>
         <nav className={'flex justify-between'}>
-          {/* <HamburgerButton onClick={handleNav} isOpen={isOpen} /> */}
+          <MobileNav className={'flex sm:flex lg:hidden'} />
           <Link href='https://copyekspert.pl/'>
             <Image
               width={254}
@@ -62,13 +53,15 @@ export default function Navbar() {
 
           <ul className={'mx-6 hidden items-center lg:flex'}>
             {routes.map((route, index) => (
-              <li
-                key={index}
-                className={
-                  'px-4 py-2 rounded-lg transition-all hover:bg-primary hover:text-background hover:scale-110 hover:shadow-lg '
-                }
-              >
-                <Link href={route.href}>{route.label}</Link>
+              <li key={index}>
+                <Link
+                  className={
+                    'block px-4 py-2 rounded-lg transition-all hover:bg-primary hover:text-background hover:scale-110 hover:shadow-lg '
+                  }
+                  href={route.href}
+                >
+                  {route.label}
+                </Link>
               </li>
             ))}
           </ul>

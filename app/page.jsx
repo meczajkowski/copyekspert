@@ -8,8 +8,8 @@ import FeaturesSection from '@/components/FeaturesSection/FeaturesSection';
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <FeaturesSection />
+      {/* <HeroSection /> */}
+      {/* <FeaturesSection /> */}
     </main>
   );
 }
