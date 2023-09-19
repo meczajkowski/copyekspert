@@ -16,8 +16,12 @@ const MobileNav = (props) => {
           <Menu size={36} />
         </SheetTrigger>
         <SheetContent side='left'>
-          <nav>
-            <ul className={'py-6 px-4'}>
+          <nav className={'h-4/6'}>
+            <ul
+              className={
+                'py-6 px-4 h-full flex flex-col justify-between overflow-y-visible'
+              }
+            >
               {routes.map((route, index) => (
                 <li key={index}>
                   <SheetClose asChild>
