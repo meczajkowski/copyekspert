@@ -18,7 +18,7 @@ const cards = [
 
 export default function FeaturesSection() {
   return (
-    <section className='bg-primary'>
+    <section className='bg-secondary'>
       <div className='flex justify-center items-center gap-10 w-full h-full p-10'>
         <div className='flex justify-center gap-10 w-full h-fit p-10'>
           {cards.map((card, index) => (
