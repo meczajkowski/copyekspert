@@ -5,6 +5,8 @@ import {
   SheetTrigger,
   SheetClose,
 } from '@/components/ui/sheet';
+import { buttonVariants } from '@/components/ui/button';
+
 import { routes } from '../Navbar/Navbar';
 import Link from 'next/link';
 
@@ -26,9 +28,9 @@ const MobileNav = (props) => {
                 <li key={index}>
                   <SheetClose asChild>
                     <Link
-                      className={
-                        'block px-4 py-4 text-center rounded-lg transition-all hover:bg-primary hover:text-background hover:scale-110 hover:shadow-lg'
-                      }
+                      className={`${buttonVariants({
+                        variant: 'ghost',
+                      })} block w-full h-auto px-4 py-4`}
                       href={route.href}
                     >
                       {route.label}

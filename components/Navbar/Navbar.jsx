@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { buttonVariants } from '@/components/ui/button';
 
 // components
 import Container from '../ui/Container';
@@ -55,9 +56,7 @@ export default function Navbar() {
             {routes.map((route, index) => (
               <li key={index}>
                 <Link
-                  className={
-                    'block px-4 py-2 rounded-lg transition-all hover:bg-primary hover:text-background hover:scale-110 hover:shadow-lg '
-                  }
+                  className={buttonVariants({ variant: 'ghost' })}
                   href={route.href}
                 >
                   {route.label}
